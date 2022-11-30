@@ -1,0 +1,9 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  name: role-for-serviceaccount-devops
+  namespace: admin
+rules:
+- apiGroups: ["*","apps","extensions"]
+  resources: ["*"]
+  verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
